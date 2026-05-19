@@ -1,7 +1,7 @@
 package com.revisandocodigo.constants;
 
 /**
- * @author wesle
+ * @author wesleyroberts
  */
 public class MasterPageToolPortletKeys {
 

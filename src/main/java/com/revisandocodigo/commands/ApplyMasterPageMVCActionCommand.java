@@ -11,15 +11,15 @@ import com.liferay.portal.kernel.servlet.SessionMessages;
 import com.liferay.portal.kernel.util.ParamUtil;
 
 import com.revisandocodigo.constants.MasterPageToolPortletKeys;
-import jakarta.portlet.ActionRequest;
-import jakarta.portlet.ActionResponse;
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
         immediate = true,
         property = {
-                "jakarta.portlet.name=" + MasterPageToolPortletKeys.MASTERPAGETOOL, // Deve ser o ID do seu portlet
+                "javax.portlet.name=" + MasterPageToolPortletKeys.MASTERPAGETOOL, // Deve ser o ID do seu portlet
                 "mvc.command.name=/apply_master_page"
         },
         service = MVCActionCommand.class
@@ -30,13 +30,13 @@ public class ApplyMasterPageMVCActionCommand extends BaseMVCActionCommand {
 
     @Override
     protected void doProcessAction(ActionRequest actionRequest, ActionResponse actionResponse) throws Exception {
-        // Pega o ID do Master Page selecionado no JSP
-        String masterPageERC = ParamUtil.getString(actionRequest, "masterLayoutEntryId");
+        // get the selected Master Page ID from the JSP
+        long masterLayoutPlid = ParamUtil.getLong(actionRequest, "masterLayoutPlid");
 
-        // Pega os PLIDs (IDs únicos das páginas) selecionados
+        // get the selected page IDs (PLIDs)
         long[] layoutPlids = ParamUtil.getLongValues(actionRequest, "layoutPlids");
 
-        if (masterPageERC.isBlank()) {
+        if (masterLayoutPlid <= 0 || layoutPlids.length == 0) {
             _log.warn("Nenhum Master Page ou Página foi selecionado.");
             return;
         }
@@ -49,7 +49,7 @@ public class ApplyMasterPageMVCActionCommand extends BaseMVCActionCommand {
                 Layout layout = _layoutLocalService.getLayout(plid);
 
                 // Define o novo Master Page para esta página
-                layout.setMasterLayoutPageTemplateEntryERC(masterPageERC);
+                layout.setMasterLayoutPlid(masterLayoutPlid);
 
                 // Persiste a alteração
                 _layoutLocalService.updateLayout(layout);

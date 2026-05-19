@@ -52,14 +52,14 @@
 						<select
 							class="form-control form-control-lg"
 							id="masterPages"
-							name="<portlet:namespace/>masterLayoutEntryId"
+							name="<portlet:namespace/>masterLayoutPlid"
 							required
 						>
 							<option value="" disabled selected>
 								<liferay-ui:message key="master-page-tool.select-master-page-placeholder" />
 							</option>
 							<% for (LayoutPageTemplateEntry masterPage : masterPages) { %>
-								<option value="<%= masterPage.getExternalReferenceCode() %>">
+								<option value="<%= masterPage.getPlid() %>">
 									<%= masterPage.getName() %>
 								</option>
 							<% } %>

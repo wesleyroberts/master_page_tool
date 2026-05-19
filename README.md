@@ -12,15 +12,12 @@ O objetivo do portlet e permitir que o usuario:
 
 O setup deste projeto foi preparado para o portal:
 
-- `dxp-2026.q1.7-lts`
-
-Por causa disso, esta branch ja segue as mudancas mais recentes da plataforma relacionadas a migracao de `javax` para `jakarta`, incluindo o uso das APIs e imports atualizados, como `jakarta.portlet.*`.
+- `portal-7.4-ga132`
 
 ## Compatibilidade
 
-Esta branch foi pensada para ambientes baseados em Liferay 2026.
+Esta branch foi pensada para ambientes baseados em Liferay 2025.
 
-Havera outra branch neste repositorio dedicada aos portais com versoes de 2025, que ainda utilizam `javax`. Essa separacao ajuda a manter o codigo mais claro e reduz o risco de misturar configuracoes e imports de plataformas diferentes.
 
 ## Translations
 
@@ -36,11 +33,7 @@ The goal of the portlet is to allow the user to:
 
 This project setup was built for:
 
-- `dxp-2026.q1.7-lts`
-
-Because of that, this branch already follows the newer platform changes related to the migration from `javax` to `jakarta`, including updated APIs and imports such as `jakarta.portlet.*`.
-
-There will be another branch in this repository focused on Liferay 2025 portal versions, which still use `javax`.
+- `portal-7.4-ga132`
 
 ### Portugues
 
@@ -54,11 +47,8 @@ O objetivo do portlet e permitir que o usuario:
 
 O setup deste projeto foi preparado para:
 
-- `dxp-2026.q1.7-lts`
+- `portal-7.4-ga132`
 
-Por causa disso, esta branch ja segue as mudancas mais recentes da plataforma relacionadas a migracao de `javax` para `jakarta`, incluindo APIs e imports atualizados como `jakarta.portlet.*`.
-
-Havera outra branch neste repositorio focada em versoes de portal Liferay 2025, que ainda utilizam `javax`.
 
 ### Espanol
 
@@ -72,8 +62,4 @@ El objetivo del portlet es permitir que el usuario:
 
 La configuracion de este proyecto fue preparada para:
 
-- `dxp-2026.q1.7-lts`
-
-Por eso, esta branch ya sigue los cambios mas recientes de la plataforma relacionados con la migracion de `javax` a `jakarta`, incluyendo APIs e imports actualizados como `jakarta.portlet.*`.
-
-Habra otra branch en este repositorio enfocada en versiones del portal Liferay 2025, que todavia usan `javax`.
+- `portal-7.4-ga132`
