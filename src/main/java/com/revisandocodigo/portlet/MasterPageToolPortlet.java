@@ -14,7 +14,7 @@ import org.osgi.service.component.annotations.Component;
 import java.io.IOException;
 
 /**
- * @author wesle
+ * @author wesleyroberts
  */
 @Component(
 	property = {
