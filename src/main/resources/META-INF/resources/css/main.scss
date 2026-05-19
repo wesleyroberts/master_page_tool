@@ -1,0 +1,56 @@
+.master-page-bulk-wrapper {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.master-page-bulk-wrapper .section-title {
+    color: #272833;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.master-page-bulk-wrapper .section-subtitle {
+    color: #6b6c7e;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+/* Container de rolagem para quando houver muitas páginas */
+.pages-scroll-container {
+    max-height: 350px;
+    overflow-y: auto;
+    border: 1px solid #e7e7ed;
+    border-radius: 0.25rem;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.page-checkbox-item {
+    padding: 0.75rem 1.25rem;
+    margin: 0;
+    border-bottom: 1px solid #e7e7ed;
+    transition: background-color 0.2s ease;
+}
+
+.page-checkbox-item:last-child {
+    border-bottom: none;
+}
+
+.page-checkbox-item:hover {
+    background-color: #eef2fa; /* Azul claro padrão Liferay */
+}
+
+.btn-apply-bulk {
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s;
+}
+
+.btn-apply-bulk:hover {
+    transform: translateY(-2px);
+}

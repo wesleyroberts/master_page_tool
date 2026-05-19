@@ -1,0 +1,7 @@
+Bundle-Name: master-page-tool
+Bundle-SymbolicName: com.revisandocodigo
+Bundle-Version: 1.0.0
+Export-Package: com.revisandocodigo.constants
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language"
